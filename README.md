@@ -1,4 +1,9 @@
-# GUC Staff Members routes
+# Database Schema: 
+![ERD_Schema](ERD_Schema.png)
+
+
+# Routes:
+## GUC Staff Members routes
 
 Functionality: Log in\
 Route: general/login\
@@ -102,7 +107,7 @@ Response example:{ total: 3.5, dates: [{date: “2020-12-22T00:00:00.000”, ext
 
 
 
-# HR routes
+## HR routes
 
 Functionality: add a location to the database\
 Route: /addlocation\
@@ -297,22 +302,22 @@ Response example: {“staffID”:1, “name”: “ahmed, email:”user@domain.c
 
 
 
-# HOD
+## HOD
 
-## End-point: Assign instructor to course
-### Description: Assign a course instructor for each course in his department.
+### End-point: Assign instructor to course
+#### Description: Assign a course instructor for each course in his department.
 Method: POST
 >```
 >localhost:3000/hod/assignInstructor
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -348,20 +353,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: Update instructor course (course)
-### Description: update a course instructor for each course in his department.
+### End-point: Update instructor course (course)
+#### Description: update a course instructor for each course in his department.
 Method: POST
 >```
 >localhost:3000/hod/updateInstructor
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -398,20 +403,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: Delete instructor from course
-### Description: delete a course instructor for each course in his department.
+### End-point: Delete instructor from course
+#### Description: delete a course instructor for each course in his department.
 Method: DELETE
 >```
 >localhost:3000/hod/deleteInstructor
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -446,26 +451,26 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: view dayOff
-### Description: View the day off of all the staff/ a single staff in his/her department
+### End-point: view dayOff
+#### Description: View the day off of all the staff/ a single staff in his/her department
 Method: GET
 >```
 >localhost:3000/hod/viewDayOff
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 
 ```
 
-### Query Params
+#### Query Params
 
 |Param|value|
 |---|---|
@@ -476,21 +481,21 @@ Method: GET
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View all Staff in my department
-### Description:  View all the staff in his/her department or per course along with their profiles.
+### End-point: View all Staff in my department
+#### Description:  View all the staff in his/her department or per course along with their profiles.
 
 Method: GET
 >```
 >localhost:3000/hod/viewStaff
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 
@@ -652,21 +657,21 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View requests
-### Description: • View all the requests “change day off/leave” sent by staff members in his/her department.
+### End-point: View requests
+#### Description: • View all the requests “change day off/leave” sent by staff members in his/her department.
 
 Method: GET
 >```
 >localhost:3000/hod/viewRequests/
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 
@@ -703,21 +708,21 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View coverage
-### Description: • View the coverage of each course in his/her department.
+### End-point: View coverage
+#### Description: • View the coverage of each course in his/her department.
 
 Method: GET
 >```
 >localhost:3000/hod/viewCoverage
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 
@@ -743,21 +748,21 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View teaching assignments
-### Description: View teaching assignments (which staff members teach which slots) of course offered by
+### End-point: View teaching assignments
+#### Description: View teaching assignments (which staff members teach which slots) of course offered by
 his department.
 Method: GET
 >```
 >localhost:3000/hod/viewAssignements
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1weyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 
@@ -824,21 +829,21 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: Accept Request
-### Description: Accept a request. if a request is accepted, appropriate logic should be executed to handle
+### End-point: Accept Request
+#### Description: Accept a request. if a request is accepted, appropriate logic should be executed to handle
 this request.
 Method: POST
 >```
 >localhost:3000/hod/AcceptRequest
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -871,20 +876,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: Reject Request
-### Description: Reject a request, and optionally leave a comment as to why this request was rejected
+### End-point: Reject Request
+#### Description: Reject a request, and optionally leave a comment as to why this request was rejected
 Method: POST
 >```
 >localhost:3000/hod/RejectRequest?comment="study weeeeell"
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNSIsInJvbGUiOiJIT0QiLCJvYmplY3RJRCI6IjVmZGUwZDU1NGRkMzBlMzRmYzI2NThlZiIsImV4cCI6MTYxMDEyMDAwMX0.lioP_wVNUH_LtVm15y1GAlMltM72g2ABCnqYqQySu1w|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -894,7 +899,7 @@ Method: POST
 }
 ```
 
-### Query Params
+#### Query Params
 
 |Param|value|
 |---|---|
@@ -922,16 +927,16 @@ Response Ex:
 ```
 
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
-# Course Instructor 
+## Course Instructor 
 
-## End-point: View coverage
-### Description: View the coverage of course(s) he/she is assigned to.
+### End-point: View coverage
+#### Description: View the coverage of course(s) he/she is assigned to.
 
 Method: GET
 >```
 >http://localhost:3000/ci/viewCoverage
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
@@ -958,13 +963,13 @@ Resopnse Ex.
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View slots
-### Description: View the slots’ assignment of course(s) he/she is assigned to.
+### End-point: View slots
+#### Description: View the slots’ assignment of course(s) he/she is assigned to.
 Method: GET
 >```
 >http://localhost:3000/ci/viewSlots
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
@@ -992,20 +997,20 @@ Resopnse Ex.
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: assign academic to unassigned slot (slots)
-### Description: Assign an academic member to an unassigned slots in course(s) he/she is assigned to.
+### End-point: assign academic to unassigned slot (slots)
+#### Description: Assign an academic member to an unassigned slots in course(s) he/she is assigned to.
 Method: POST
 >```
 >http://localhost:3000/ci/AssignUnassignedSlot
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1038,20 +1043,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: delete academic from slot (slots)
-### Description: delete assignment of academic member in course(s) he/she is assigned to
+### End-point: delete academic from slot (slots)
+#### Description: delete assignment of academic member in course(s) he/she is assigned to
 Method: POST
 >```
 >http://localhost:3000/ci/deleteAcademicFromSlot
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1083,20 +1088,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: update academic slot assignment (slots)
-### Description: Update assignment of academic member in course(s) he/she is assigned to.
+### End-point: update academic slot assignment (slots)
+#### Description: Update assignment of academic member in course(s) he/she is assigned to.
 Method: POST
 >```
 >http://localhost:3000/ci/updateSlot
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1132,14 +1137,14 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: View staff assignments
-### Description: View all the staff in his/her department or per course along with their profiles.
+### End-point: View staff assignments
+#### Description: View all the staff in his/her department or per course along with their profiles.
 
 Method: GET
 >```
 >http://localhost:3000/ci/viewStaffWithCourseAssignments
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
@@ -1284,20 +1289,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: assign course to TA (course)
-### Description: 
+### End-point: assign course to TA (course)
+#### Description: 
 Method: POST
 >```
 >localhost:3000/ci/assignTaToCourse
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1330,20 +1335,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: update ta course (course)
-### Description: 
+### End-point: update ta course (course)
+#### Description: 
 Method: POST
 >```
 >localhost:3000/ci/updateTACourse
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1380,20 +1385,20 @@ Response Ex:
 ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃ ⁃
 
 
-## End-point: delete course from TA (course)
-### Description: 
+### End-point: delete course from TA (course)
+#### Description: 
 Method: POST
 >```
 >localhost:3000/ci/deleteTafromCourse
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
@@ -1424,20 +1429,20 @@ Response Ex:
 
 
 
-## End-point: assign course coordinator
-### Description: Assign an academic member to an unassigned slots in course(s) he/she is assigned to.
+### End-point: assign course coordinator
+#### Description: Assign an academic member to an unassigned slots in course(s) he/she is assigned to.
 Method: POST
 >```
 >http://localhost:3000/ci/AssignCoordinator
 >```
-### Headers
+#### Headers
 
 |Content-Type|Value|
 |---|---|
 |auth-token|eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdGFmZklEIjoiYWMtNiIsInJvbGUiOiJDb3Vyc2UgSW5zdHJ1Y3RvciIsIm9iamVjdElEIjoiNWZkZmRmYmEyZGU2OWEzMGQ0MGIwZmYwIiwiZXhwIjoxNjEwMTE1MDQyfQ.BQIjNtK2MmmSSgWnZwjpf3tM1OUkldlX0J2P15ObkyY|
 
 
-### Body (**raw**)
+#### Body (**raw**)
 
 ```json
 {
